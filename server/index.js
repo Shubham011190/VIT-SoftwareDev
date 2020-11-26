@@ -46,6 +46,7 @@ io.on('connect', (socket) => {
       io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room)});
     }
   })
+  
 });
 
 server.listen(process.env.PORT || 5000, () => console.log(`Server has started.`));
